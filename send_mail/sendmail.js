@@ -16,7 +16,7 @@ const sendingmail = async (to, subject, messagecontent) => {
     const message = {
       to,
       subject,
-      html: `<p>you have a new message</p><p>message: ${messagecontent}</p>`,
+      html: `<p>you have a new message</p><p>message:${messagecontent}</p>`,
     };
     //send config mail
     const info = await transporter.sendMail(message);
