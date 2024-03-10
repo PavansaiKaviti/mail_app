@@ -1,6 +1,7 @@
 //creating a server
 const express = require("express");
 const path = require("path");
+//importing routers here
 const homeRouter = require("./routes/homedata");
 
 // using modules
@@ -12,7 +13,7 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 // request
 app.get("/", (req, res) => {
-  res.render(path.join(__dirname, "public/views", "mailform"));
+  res.render("mailform");
 });
 //post data
 app.use("/", homeRouter);
