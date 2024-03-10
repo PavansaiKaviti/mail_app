@@ -16,7 +16,6 @@ const sendingmail = async (to, subject, messagecontent) => {
     const message = {
       to,
       subject,
-      message: messagecontent,
       html: `<p>you have a new message</p><p>message: ${messagecontent}</p>`,
     };
     //send config mail
